@@ -13,18 +13,18 @@ export class TodoService {
 
     getAll(includeDeleted: boolean): Promise<Array<ITodoItem>> {
         if (includeDeleted) {
-            return this.table.toArray();
+            // TODO
         }
-        return this.table.filter(item => !item.deleted).reverse().toArray();
+        // TODO
     }
 
     add(item: ITodoItem): Promise<number> {
-        return this.table.put(item);
+        // TODO
     }
 
     async update(item: ITodoItem): Promise<number> {
         item.changed = true;
-        return await this.table.update(item.id, item);
+        // TODO
     }
 
     async delete(item: ITodoItem): Promise<number> {

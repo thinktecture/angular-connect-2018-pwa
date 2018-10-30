@@ -7,8 +7,8 @@ export class PushController implements BaseController {
     private _subscriptions = [];
     // Key generation: https://web-push-codelab.glitch.me/
     private vapidKeys = {
-        public: 'BBh_zx5aEnlMyrM8W8anuyxx2ibkb9cUxZclHHDHuBd3uX7PNp-minttLaWe0jpOiHvNfUHXD1rUXTfYf87URlE',
-        private: '43EHInkVq7KRGQ9IJLNLnQ_jGtpsYVPqf7lUcVPd6uE'
+        public: '', // TODO
+        private: '' // TODO
     };
 
     public setup(httpServer: HttpServer): void {
@@ -37,6 +37,7 @@ export class PushController implements BaseController {
                 title: req.body.title,
                 body: req.body.body,
                 icon: '/assets/icon-144x144.png'
+                // TODO
             }
         };
 

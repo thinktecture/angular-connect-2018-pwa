@@ -9,20 +9,13 @@ export class ShareService {
     }
 
     share(title: string, text: string, url: string): Promise<void> {
-        const feature = this.featureService.detectFeature(BrowserFeatureKey.WebShareAPI);
-        if (feature.supported) {
-            return this.shareNative(title, text, url);
-        } else {
-            return this.sendMail(title, text, url);
-        }
+        // TODO Replace return value
+        return Promise.resolve();
     }
 
     private shareNative(title: string, text: string, url: string): Promise<void> {
-        return this.window.navigator.share({
-            title: title,
-            text: text,
-            url: url
-        });
+        // TODO Replace return value
+        return Promise.resolve();
     }
 
     private sendMail(title: string, text: string, url: string) {

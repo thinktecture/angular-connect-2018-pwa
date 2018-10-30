@@ -14,18 +14,7 @@ export class UpdateService {
     }
 
     register() {
-        if (!this.swUpdate.isEnabled) {
-            return;
-        }
-        this.subscription = this.swUpdate.available.subscribe(async () =>
-            this.notificationId = await this.notificationService
-                .showNotification('Update available!', 'Please reload to update the application', 'Reload'));
-
-        this.notificationService.notificationClicked
-            .pipe(
-                filter(notificationId => notificationId === this.notificationId)
-            )
-            .subscribe(() => this.window.location.reload());
+        // TODO
     }
 
     unregister() {

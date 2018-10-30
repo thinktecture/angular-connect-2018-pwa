@@ -6,8 +6,9 @@ import {DatabaseService} from './database.service';
 import {NotificationService} from './notification.service';
 import {ShareService} from './share.service';
 import {AppStateService} from './appState.service';
-import {InstallBannerService} from './installBanner.service';
+import {InstallPromptService} from './install-prompt.service';
 import {ApiService} from './api.service';
+import {StorageService} from './storageService';
 
 export const SHARED_SERVICES = [
     FeatureService,
@@ -19,5 +20,6 @@ export const SHARED_SERVICES = [
     NotificationService,
     ShareService,
     AppStateService,
-    InstallBannerService,
+    InstallPromptService,
+    StorageService,
 ];

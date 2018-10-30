@@ -22,6 +22,10 @@
                 <i class="material-icons">perm_contact_calendar</i>
                 <a>About</a>
             </li>
+            <li routerLinkActive="active" (click)="addToHomeScreen()" *ngIf="showAddToHomeScreen">
+                <i class="material-icons">launch</i>
+                <a>Add to homescreen</a>
+            </li>
         </ul>
     </nav>
 </div>

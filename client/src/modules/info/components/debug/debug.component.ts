@@ -29,7 +29,7 @@ export class DebugComponent {
                 if (success) {
                     this.addDebugInfo('Push notifications unregistered.');
                 } else {
-                    this.addDebugInfo('Unregister push notification failed.')
+                    this.addDebugInfo('Unregister push notificationSettings failed.')
                 }
             });
     }
@@ -51,8 +51,12 @@ export class DebugComponent {
     sendPushNotification() {
         this.apiService.post('push/notifyAll', {
             title: 'Push Notification',
-            body: 'This is a push notification!'
+            body: 'This is a push notificationSettings!'
         }).subscribe();
+    }
+
+    enableNotifications() {
+        this.pushNotificationService.register();
     }
 
     private addDebugInfo(info: string) {

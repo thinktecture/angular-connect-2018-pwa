@@ -22,18 +22,18 @@ export class TodoService {
         return this.table.put(item);
     }
 
-    async update(item: ITodoItem): Promise<boolean> {
+    async update(item: ITodoItem): Promise<number> {
         item.changed = true;
-        return !!(await this.table.update(item.id, item));
+        return await this.table.update(item.id, item);
     }
 
-    async delete(item: ITodoItem): Promise<boolean> {
+    async delete(item: ITodoItem): Promise<number> {
         if (!item.syncId) {
             await this.table.delete(item.id);
-            return Promise.resolve(true);
+            return Promise.resolve(1);
         } else {
             item.deleted = true;
-            return !!(await this.table.update(item.id, item));
+            return await this.table.update(item.id, item);
         }
     }
 

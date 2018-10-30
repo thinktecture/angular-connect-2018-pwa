@@ -1,5 +1,5 @@
 import * as restify from 'restify';
-import {RequestHandler, Server} from 'restify';
+import {Next, Request, RequestHandler, Response, Server} from 'restify';
 import * as corsMiddleware from 'restify-cors-middleware';
 import {Options} from 'restify-cors-middleware';
 import {CONTROLLERS} from '../controllers';
@@ -12,6 +12,10 @@ export class ApiServer implements HttpServer {
     this._restify = restify.createServer();
     this._addCors();
     this._setupControllers();
+
+      this._addRoute('get', '/', (req: Request, res: Response, next: Next) => {
+          res.send(200, 'API is up and running.');
+      });
 
     this._restify.listen(port, () => console.log('Up and running on port 9090'));
   };

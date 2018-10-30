@@ -8,6 +8,10 @@ import {ApiService} from './api.service';
 export class PushNotificationService {
     private pushSubscription: PushSubscription;
 
+    get available(): boolean {
+        return this.swPush.isEnabled;
+    }
+
     constructor(private readonly swPush: SwPush, private readonly apiService: ApiService) {
     }
 

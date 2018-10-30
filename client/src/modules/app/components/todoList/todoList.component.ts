@@ -19,6 +19,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {WINDOW} from '../../../shared/services/window.token';
 import {catchError} from 'rxjs/operators';
 import {of} from 'rxjs';
+import {fromPromise} from 'rxjs/internal-compatibility';
 
 @Component({
     selector: 'todo-list',
@@ -41,7 +42,6 @@ export class TodoListComponent implements OnChanges {
     constructor(private readonly shareService: ShareService, private readonly notificationService: NotificationService, @Inject(WINDOW) windowRef: Window,
                 private readonly changeDetectorRef: ChangeDetectorRef, private readonly activatedRoute: ActivatedRoute, private readonly router: Router) {
         this.shareUrl = windowRef.location.href;
-        console.log('foo');
     }
 
     ngOnChanges(changes: SimpleChanges) {
@@ -69,7 +69,7 @@ export class TodoListComponent implements OnChanges {
 
     shareItem(item: ITodoItem) {
         if (item.syncId) {
-            this.shareService.share('New Todo!', item.text, this.shareUrl)
+            fromPromise(this.shareService.share('New Todo!', item.text, this.shareUrl))
                 .pipe(
                     catchError(() => {
                         this.notificationService.showNotification('Error!', 'Sharing Todo item failed!');

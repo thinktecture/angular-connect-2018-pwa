@@ -1,8 +1,7 @@
-# Web goes Native: Progressive Web Apps (PWA) with Angular—in Action!
+# Progressive Web Apps (PWA) with Angular—rocking the web the native way!
 
-##CONFERENCE LINK HERE##
+[Angular Connect Workshop](https://angularconnect.com/workshops/progressive-web-apps), Monday 5th November 2018 9:30-17:30
 
-##UPDATE TRAINERS
 Your trainers: [Christian Weyer](https://twitter.com/christianweyer), [Christian Liebel](https://twitter.com/chris_liebel), [Steffen Jahr](https://twitter.com/steffenjahr), Thinktecture.
 
 ## Setup
@@ -21,9 +20,9 @@ Please bring your developer devices and install the following software. [Already
 - Note: iOS Devices do not yet support the technologies that make a real PWA - sorry
 
 #### Browsers (Desktop)
-- [Google Chrome](https://www.google.de/chrome/browser/desktop/), version 63 or later
-- Optional: [Mozilla Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/), version 58 or later
-- Optional: [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html), version 65 or later
+- [Google Chrome](https://www.google.de/chrome/browser/desktop/), version 68 or later
+- Optional: [Mozilla Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/), version 62 or later
+- Optional: [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html), version 70 or later
 
 #### Developer Tools
 - [Git](https://git-scm.com/) (obviously)
@@ -31,7 +30,7 @@ Please bring your developer devices and install the following software. [Already
 - [Node.js](https://nodejs.org/en/), version 8.9.4 LTS
 - [ngrok](https://ngrok.com/download) for secure & easy TCP/HTTP/HTTPS tunneling during development
 - Editor of your choice
-  - [WebStorm](https://www.jetbrains.com/webstorm/) 2017.3.3 (commercial, free trial)
+  - [WebStorm](https://www.jetbrains.com/webstorm/) 2018.1 (commercial, free trial)
   - [Visual Studio Code](https://code.visualstudio.com/), recent version
   - Notepad, vi, …
 
@@ -42,18 +41,18 @@ On your favorite terminal, please run:
 ```
 npm uninstall -g angular-cli @angular/cli
 npm cache verify
-npm install -g @angular/cli@1.6.6
+npm install -g @angular/cli@7.0.1 
 ```
 
 Next, navigate to a folder of your choice and execute:
 
 ## UPDATE REPO LINKS
 ```
-git clone https://github.com/thinktecture/ngeurope-2018-pwa.git
-cd ngeurope-2018-pwa/api
+git clone https://github.com/thinktecture/angular-connect-2018-pwa.git
+cd angular-connect-2018-pwa/api
 npm install   # or yarn install (if installed)
 cd ../client
 npm install   # or yarn install (if installed)
 ```
 
-If you prefer SSH, you can use this checkout URL: `git@github.com:thinktecture/ngeurope-2018-pwa.git`
+If you prefer SSH, you can use this checkout URL: `git@github.com:thinktecture/angular-connect-2018-pwa.git`

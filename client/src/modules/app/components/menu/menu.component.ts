@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
     }
 
     addToHomeScreen() {
-        this.installBannerServer.register();
+        this.installBannerServer.showPrompt();
         this.close();
     }
 }

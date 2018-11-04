@@ -46,7 +46,6 @@ npm install -g @angular/cli@7.0.1
 
 Next, navigate to a folder of your choice and execute:
 
-## UPDATE REPO LINKS
 ```
 git clone https://github.com/thinktecture/angular-connect-2018-pwa.git
 cd angular-connect-2018-pwa/api

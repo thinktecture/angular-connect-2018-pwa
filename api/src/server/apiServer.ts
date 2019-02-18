@@ -22,19 +22,19 @@ export class ApiServer implements HttpServer {
 
 
     public get(url: string, requestHandler: RequestHandler): void {
-        this._addRoute('get', `api${url}`, requestHandler);
+        this._addRoute('get', `/api${url}`, requestHandler);
     }
 
     public post(url: string, requestHandler: RequestHandler): void {
-        this._addRoute('post', `api${url}`, requestHandler);
+        this._addRoute('post', `/api${url}`, requestHandler);
     }
 
     public del(url: string, requestHandler: RequestHandler): void {
-        this._addRoute('del', `api${url}`, requestHandler);
+        this._addRoute('del', `/api${url}`, requestHandler);
     }
 
     public put(url: string, requestHandler: RequestHandler): void {
-        this._addRoute('put', `api${url}`, requestHandler);
+        this._addRoute('put', `/api${url}`, requestHandler);
     }
 
     private _addCors(): void {
